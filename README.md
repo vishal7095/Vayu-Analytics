@@ -30,9 +30,3 @@ To run the application locally, follow these steps:
 ## Contributing
 
 We welcome contributions from the community. If you find any issues or have suggestions for improvements, please submit a pull request or open an issue in the repository.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-Thank you for using Vayu Analytics!
