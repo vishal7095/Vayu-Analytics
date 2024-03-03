@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vayu Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b>Welcome to Vayu Analytics</b></a>
+            
+            <!-- Search Form -->
+            <form action="/search" method="POST" class="form-inline mt-3">
+                <label for="search" class="sr-only">Search</label>
+                <input type="search" id="search" name="search" class="form-control mr-sm-2" placeholder="Enter the location">
+                <button type="submit" class="btn btn-primary" onclick="searchWeather(event)">Search</button>
+            </form>   
+        </div>
+    </nav>
+
+    <!-- Weather Overview Card -->
+    <div class="card weather-overview mt-4">
+        <div class="weather-image">
+            <img src="./images/logo.png" alt="Weather Image" class="img-fluid" id="weatherImage">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-title">Weather Overview</h2>
+            <p class="card-text location">City, Country</p>
+            <p class="card-text date-time">As of [Current Date and Time]</p>
+
+            <!-- Temperature Section -->
+            <div class="temperature">
+                <p class="card-text current-temp">25&deg;C</p>
+                <p class="card-text weather-des">Party Cloudy</p>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="add-info mt-3">
+                <p class="card-text humidity-info">Humidity: 60%</p>
+                <p class="card-text wind-speed-info">Wind-Speed: 25km/hr</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

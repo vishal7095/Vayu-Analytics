@@ -1,0 +1,30 @@
+body {
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    background-image: url(./images/weather.jpg);
+}
+
+.container {
+    text-align: center;
+}
+
+.weather-overview {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.temperature {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-inline {
+    justify-content: center;
+}
+
+#weatherImage {
+    width: 7rem;
+    height: 7rem;
+}
