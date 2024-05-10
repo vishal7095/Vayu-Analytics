@@ -20,15 +20,31 @@ function updateDateTime() {
 }
 
 function updateWeatherOverview() {
-    locationInfo.textContent = weatherData.location;
-    currentTemp.textContent = weatherData.temperature;
-    weatherDes.textContent = weatherData.weatherDes;
-    humidityInfo.textContent = "Humidity: " + weatherData.humidity;
-    windSpeedInfo.textContent = "Wind-Speed: " + weatherData.windSpeed;
+  locationInfo.textContent = weatherData.location;
+  currentTemp.textContent = weatherData.temperature;
+  weatherDes.textContent = weatherData.weatherDes;
+  humidityInfo.textContent = "Humidity: " + weatherData.humidity;
+  windSpeedInfo.textContent = "Wind-Speed: " + weatherData.windSpeed;
 
-    setWeatherBackground(weatherData.weatherDes);
+  const temperature = parseFloat(weatherData.temperature);
+  let temperatureIcon;
 
-    weatherImage.src = `http://openweathermap.org/img/wn/${weatherData.weatherIcon}.png`;
+  if (temperature > 40) {
+    temperatureIcon =
+      '<i class="fas fa-thermometer-full" style="color: red;"></i>';
+  } else if (temperature > 28) {
+    temperatureIcon =
+      '<i class="fas fa-thermometer-half" style="color: black;"></i>';
+  } else {
+    temperatureIcon =
+      '<i class="fas fa-thermometer-empty" style="color: green;"></i>';
+  }
+
+  currentTemp.innerHTML = `${temperatureIcon} ${weatherData.temperature}`;
+
+  setWeatherBackground(weatherData.weatherDes);
+
+  weatherImage.src = `http://openweathermap.org/img/wn/${weatherData.weatherIcon}.png`;
 }
 
 function searchWeather(event) {
